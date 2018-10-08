@@ -1,0 +1,27 @@
+{
+    "name": "@mikazuki/antarctic-static.mochizuki.moe",
+    "version": "0.1.0",
+    "main": "bin/index.js",
+    "types": "bin/index.d.ts",
+    "bin": {
+        "graham": "bin/graham.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w",
+        "cdk": "cdk"
+    },
+    "devDependencies": {
+        "@types/node": "^8.9.4",
+        "aws-cdk": "^0.9.2",
+        "typescript": "^2.8.3"
+    },
+    "dependencies": {
+        "@aws-cdk/aws-certificatemanager": "^0.10.0",
+        "@aws-cdk/aws-cloudfront": "^0.10.0",
+        "@aws-cdk/aws-s3": "^0.10.0",
+        "@aws-cdk/aws-sns": "^0.10.0",
+        "@aws-cdk/aws-sqs": "^0.10.0",
+        "@aws-cdk/cdk": "^0.10.0"
+    }
+}
