@@ -1,5 +1,5 @@
 {
-    "name": "@mikazuki/antarctic-static.mochizuki.moe",
+    "name": "antarctic-graham",
     "version": "0.1.0",
     "main": "bin/index.js",
     "types": "bin/index.d.ts",

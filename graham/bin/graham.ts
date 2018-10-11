@@ -4,7 +4,7 @@ import * as cloudfront from "@aws-cdk/aws-cloudfront";
 import * as s3 from "@aws-cdk/aws-s3";
 import * as cdk from "@aws-cdk/cdk";
 
-class StaticService extends cdk.Stack {
+class GrahamStack extends cdk.Stack {
     constructor(parent: cdk.App, name: string, props?: cdk.StackProps) {
         super(parent, name, props);
 
@@ -54,6 +54,6 @@ class StaticService extends cdk.Stack {
 
 const app = new cdk.App(process.argv);
 
-new StaticService(app, "StaticMochizukiMoe");
+new GrahamStack(app, "GrahamStack");
 
 process.stdout.write(app.run());

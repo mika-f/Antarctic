@@ -1,6 +1,13 @@
-# Antarctic - Graham
+# Antarctic - Graham Land
 
 Static file hosting for external websites.
+
+
+## Structure
+
+* Amazon Certificate Manager
+* Amazon CloudFront
+* Amazon S3
 
 
 ## Useful commands
