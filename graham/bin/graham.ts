@@ -28,11 +28,10 @@ class GrahamStack extends cdk.Stack {
 
         new cloudfront.CloudFrontWebDistribution(this, `CloudFront-${name}`, {
             aliasConfiguration: {
-                acmCertRef: "arn:aws:acm:us-east-1:123456789012:certificate/58d7ec39-e8d6-40c6-8697-5f6733be0b5b",
+                acmCertRef: "arn:aws:acm:us-east-1:011761533955:certificate/58d7ec39-e8d6-40c6-8697-5f6733be0b5b",
                 names: ["static.mochizuki.moe"],
                 sslMethod: cloudfront.SSLMethod.SNI,
-                // vNext
-                // securityPolicy: cloudfront.SecurityPolicyProtocol.TLSv1_2_2016,
+                securityPolicy: cloudfront.SecurityPolicyProtocol.TLSv1_2_2018,
             },
             originConfigs: [
                 {
@@ -40,7 +39,6 @@ class GrahamStack extends cdk.Stack {
                         s3BucketSource: bucket,
                         // Need to set "Yes, Update Bucket Policy" at the CloudFront Console?
                         originAccessIdentity: originId,
-
                     },
                     behaviors: [
                         { isDefaultBehavior: true }
@@ -52,8 +50,8 @@ class GrahamStack extends cdk.Stack {
     }
 }
 
-const app = new cdk.App(process.argv);
+const app = new cdk.App();
 
 new GrahamStack(app, "GrahamStack");
 
-process.stdout.write(app.run());
+app.run();
