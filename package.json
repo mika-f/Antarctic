@@ -1,9 +1,0 @@
-{
-    "name": "antarctic",
-    "version": "1.0.0",
-    "description": "Serverless *.mochizuki.moe by Amaozn Web Services.",
-    "private": true,
-    "workspaces": [
-        "graham"
-    ]
-}
